@@ -34,7 +34,7 @@
           <v-btn
             block
             :loading="loading"
-            @click="handleLogout"
+            @click="logout"
           >
             Logout
           </v-btn>
@@ -68,15 +68,14 @@ export default {
     menus: [
       { title: '全部影片', path: '/list', icon: 'mdi-view-dashboard' },
       { title: '最愛影片', path: '/favorite', icon: 'mdi-cards-heart' },
-      { title: '收藏賣家', path: '/seller', icon: 'mdi-account-heart' },
+      { title: '新增作者  ', path: '/seller', icon: 'mdi-account-heart' },
       { title: '後台操作', path: '/dashboard', icon: 'mdi-cog' },
     ],
   }),
   methods: {
-    handleLogout() {
+    logout() {
       this.loading = true
       window.localStorage.setItem('fc-user', null)
-
       setTimeout(() => {
         this.loading = false
         this.$router.push({ path: '/login' })

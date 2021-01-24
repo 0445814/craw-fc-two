@@ -18,7 +18,7 @@
           >
             <router-link
               class="white--text text-decoration-none"
-              :to="'/list/' + i "
+              :to="'/list/' + i"
             >
               <h2 class="text-h5 text-truncate font-weight-bold pa-3">
                 Pre-fab homes11111111111111111111111111111111111111111111111
@@ -45,9 +45,7 @@
               2020-01-24
             </span>
           </v-card-actions>
-          <v-bottom-navigation
-            :height="40"
-          >
+          <v-bottom-navigation :height="40">
             <v-btn value="favorites">
               <v-icon>mdi-heart</v-icon>
             </v-btn>

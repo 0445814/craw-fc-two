@@ -61,12 +61,16 @@ const routes = [
       },
     ],
   },
+  {
+    path: '*',
+    redirect: '/list',
+  },
 ]
 
 const router = new VueRouter({
-  mode: 'history',
-  base: '/craw-fc-two/',
-  // base: process.env.BASE_URL,
+  // mode: 'history',
+  // base: '/craw-fc-two/',
+  base: process.env.BASE_URL,
   routes,
 })
 

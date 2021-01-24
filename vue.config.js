@@ -1,5 +1,5 @@
 module.exports = {
-  publicPath: '/craw-fc-two/',
+  publicPath: process.env.NODE_ENV === 'production' ? '/craw-fc-two/' : '/',
   transpileDependencies: [
     'vuetify',
   ],
